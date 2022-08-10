@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Homepage/Home";
-import Login from "./components/Loginpage/Login";
-import Create from "./components/CRUD/create";
-import Navbarcomp from "./components/Navbar/Navbarcomp";
+import Home from "./components/Homepage/Home.js";
+import Login from "./components/Loginpage/Login.js";
+import Create from "./components/CRUD/create.js";
+import Navbarcomp from "./components/Navbar/Navbarcomp.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { myContext } from "./Context";
-import Dashboard from "./components/Dashboard/Dashboard";
-import PublicTexts from "./components/PublicTexts/PublicTexts";
-import Error from "./components/Error";
-import Text from "./components/CRUD/text";
-import Edit from "./components/CRUD/edit";
-import NoPage from "./components/Nopage";
+import { myContext } from "./Context.js";
+import Dashboard from "./components/Dashboard/Dashboard.js";
+import PublicTexts from "./components/PublicTexts/PublicTexts.js";
+import Error from "./components/Error.js";
+import Text from "./components/CRUD/text.js";
+import Edit from "./components/CRUD/edit.js";
+import NoPage from "./components/Nopage.js";
 
 function App() {
   const context = useContext(myContext);

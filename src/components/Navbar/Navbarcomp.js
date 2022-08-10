@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { myContext } from "../../Context";
+import { myContext } from "../../Context.js";
 
 function Navbarcomp() {
   const context = useContext(myContext);

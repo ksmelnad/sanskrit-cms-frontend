@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Container } from "react-bootstrap";
 import { useEffect } from "react";
-import { EDITOR_JS_TOOLS } from "./tools";
+import { EDITOR_JS_TOOLS } from "./tools.js";
 import EditorJS from "@editorjs/editorjs";
 
 const Text = () => {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import TextList from "../CRUD/textlist";
+import TextList from "../CRUD/textlist.js";
 import { Container } from "react-bootstrap";
-import { myContext } from "../../Context";
+import { myContext } from "../../Context.js";
 
 function Dashboard() {
   const userObject = useContext(myContext);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import PublicTextsList from "../CRUD/publictextslist";
+import PublicTextsList from "../CRUD/publictextslist.js";
 
 function PublicTexts() {
   return (

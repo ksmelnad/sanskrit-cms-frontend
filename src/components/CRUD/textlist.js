@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { myContext } from "../../Context";
+import { myContext } from "../../Context.js";
 
 const Text = (props) => {
   // console.log(dayjs().format(props.text.date));

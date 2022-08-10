@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { myContext } from "../Context";
-import Login from "./Loginpage/Login";
+import { myContext } from "../Context.js";
+import Login from "./Loginpage/Login.js";
 
 function Error() {
   const context = useContext(myContext);
