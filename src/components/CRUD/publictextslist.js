@@ -21,7 +21,9 @@ function PublicTextsList() {
 
   useEffect(() => {
     async function getTexts() {
-      const response = await fetch(`https://localhost:5000/public`);
+      const response = await fetch(
+        `https://sanskrit-cms-backend.herokuapp.com/public`
+      );
 
       if (!response.ok) {
         const message = "Error occurred";

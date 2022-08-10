@@ -19,7 +19,7 @@ const Edit = () => {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://localhost:5000/text/${params.id.toString()}`
+        `https://sanskrit-cms-backend.herokuapp.com/text/${params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -61,13 +61,16 @@ const Edit = () => {
     editor
       .save()
       .then(async (content) => {
-        await fetch(`https://localhost:5000/update/${params.id}`, {
-          method: "PATCH",
-          body: JSON.stringify({ googleId, title, status, content }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        await fetch(
+          `https://sanskrit-cms-backend.herokuapp.com/update/${params.id}`,
+          {
+            method: "PATCH",
+            body: JSON.stringify({ googleId, title, status, content }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       })
       .catch((error) => {
         console.log("Saving failed: ", error);

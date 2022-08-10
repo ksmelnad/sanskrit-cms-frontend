@@ -36,13 +36,16 @@ function TextList() {
 
   useEffect(() => {
     async function getTexts() {
-      const response = await fetch(`https://localhost:5000/text`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ req_googleId }),
-      });
+      const response = await fetch(
+        `https://https://sanskrit-cms-backend.herokuapp.com/text`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ req_googleId }),
+        }
+      );
       if (!response.ok) {
         const message = "An error occurred:";
         window.alert(message);
@@ -57,7 +60,7 @@ function TextList() {
 
   // This method will delete a record
   async function deleteText(id) {
-    await fetch(`https://localhost:5000/${id}`, {
+    await fetch(`https://sanskrit-cms-backend.herokuapp.com/${id}`, {
       method: "DELETE",
     });
 

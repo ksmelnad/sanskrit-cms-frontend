@@ -15,7 +15,7 @@ const Text = () => {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://localhost:5000/text/${params.id.toString()}`
+        `https://sanskrit-cms-backend.herokuapp.com/text/${params.id.toString()}`
       );
 
       if (!response.ok) {
