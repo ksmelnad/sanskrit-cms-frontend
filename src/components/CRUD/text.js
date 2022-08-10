@@ -32,7 +32,7 @@ const Text = () => {
         return;
       }
       setText(text);
-      EditorJS({
+      const editor = new EditorJS({
         tools: EDITOR_JS_TOOLS,
         holder: "editorjs",
         logLevel: "ERROR",
@@ -42,7 +42,8 @@ const Text = () => {
         //   console.log("Editor.js is ready to work!");
         // },
         autofocus: false,
-      })();
+      });
+      console.log(editor);
     }
 
     fetchData();
