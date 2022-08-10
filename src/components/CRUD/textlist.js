@@ -37,7 +37,7 @@ function TextList() {
   useEffect(() => {
     async function getTexts() {
       const response = await fetch(
-        `https://https://sanskrit-cms-backend.herokuapp.com/text`,
+        `https://sanskrit-cms-backend.herokuapp.com/text`,
         {
           method: "POST",
           headers: {
