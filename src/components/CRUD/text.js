@@ -4,6 +4,9 @@ import { Container } from "react-bootstrap";
 import { useEffect } from "react";
 import { EDITOR_JS_TOOLS } from "./tools.js";
 import EditorJS from "@editorjs/editorjs";
+import Button from "react-bootstrap/Button";
+import Collapse from "react-bootstrap/Collapse";
+
 
 const Text = () => {
   const [text, setText] = useState({});

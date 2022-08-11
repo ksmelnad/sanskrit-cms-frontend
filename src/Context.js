@@ -14,7 +14,6 @@ function Context(props) {
       .then((res) => {
         if (res.data) {
           setUserObject(res.data);
-          //console.log("Context:", res.data);
         }
       });
   }, []);
