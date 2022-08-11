@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { myContext } from "../../Context.js";
+import { BsPencilSquare } from "react-icons/bs";
+import { BsTrash } from "react-icons/bs";
 
 const Text = (props) => {
   // console.log(dayjs().format(props.text.date));
@@ -9,20 +11,28 @@ const Text = (props) => {
   return (
     <tr>
       <td>
-        <Link to={`/text/${props.text._id}`}> {props.text.title}</Link>{" "}
+        <Link
+          style={{ textDecoration: "none", color: "#0a58ca" }}
+          to={`/text/${props.text._id}`}
+        >
+          {" "}
+          {props.text.title}
+        </Link>{" "}
       </td>
       <td>{props.text.status}</td>
       <td>{newDate}</td>
       <td>
-        <Link to={`/edit/${props.text._id}`}>Edit</Link> |
-        <button
-          className="btn btn-link align-middle"
+        <Link to={`/edit/${props.text._id}`}>
+          <BsPencilSquare style={{ color: "#0a58ca" }} />
+        </Link>
+
+        <BsTrash
+          style={{ marginLeft: "10px", color: "#0a58ca" }}
+          type="button"
           onClick={() => {
             props.deleteText(props.text._id);
           }}
-        >
-          Delete
-        </button>
+        />
       </td>
     </tr>
   );

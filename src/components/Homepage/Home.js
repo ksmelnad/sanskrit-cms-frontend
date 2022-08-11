@@ -4,6 +4,7 @@ function Home() {
   return (
     <div className="container mt-5">
       <h3>Welcome to Sanskrit Literature Content Management System!</h3>
+
       <div className="mt-5">
         <p>
           This is a place dedicated to creating Sanskrit Literature content and

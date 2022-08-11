@@ -7,6 +7,7 @@ import EditorJS from "@editorjs/editorjs";
 
 const Text = () => {
   const [text, setText] = useState({});
+  const [open, setOpen] = useState(false);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -51,6 +52,17 @@ const Text = () => {
     return;
   }, [params.id, navigate]);
 
+  const exportData = () => {
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(text.content, null, 2)
+    )}`;
+    const link = document.createElement("a");
+    link.href = jsonString;
+    link.download = `${text.title}.json`;
+    link.click();
+  };
+
+
   return (
     <Container>
       <div className="mt-5">
@@ -59,6 +71,38 @@ const Text = () => {
         <div className="bg-light mt-3" id="editorjs">
           {" "}
         </div>
+        <div className="row mt-3">
+          <div className="col">
+            <Button
+              style={{ backgroundColor: "#0a58ca" }}
+              size="sm"
+              onClick={() => {
+                setOpen(!open);
+              }}
+              aria-controls="toggle-json"
+              aria-expanded={open}
+            >
+              Toggle JSON
+            </Button>
+            <Collapse in={open}>
+              <div id="toggle-json">
+                <pre>{JSON.stringify(text.content, null, 2)}</pre>
+              </div>
+            </Collapse>
+          </div>
+          <div className="col align">
+            <Button
+              style={{ backgroundColor: "#0a58ca" }}
+              size="sm"
+              className="float-end"
+              type="button"
+              onClick={exportData}
+            >
+              Export Data
+            </Button>
+          </div>
+        </div>
+        <div className="mb-5"></div>
       </div>
     </Container>
   );
