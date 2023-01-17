@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 
 function Login() {
   const googleLogin = () => {
-    window.location.href = "https://sanskrit-cms-backend.herokuapp.com/auth/google";
+    window.location.href = "https://sanskrit-cms-backend.onrender.com/auth/google";
   };
   return (
     <Container className="mt-5">

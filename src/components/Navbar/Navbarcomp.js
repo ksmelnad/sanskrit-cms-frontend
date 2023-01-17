@@ -11,7 +11,7 @@ function Navbarcomp() {
 
   const logout = () => {
     axios
-      .get("https://sanskrit-cms-backend.herokuapp.com/auth/logout", {
+      .get("https://sanskrit-cms-backend.onrender.com/auth/logout", {
         withCredentials: true,
       })
       .then((res) => {
