@@ -19,7 +19,7 @@ const Text = () => {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://sanskrit-cms-backend.herokuapp.com/text/${params.id.toString()}`
+        `https://sanskrit-cms-backend.onrender.com/text/${params.id.toString()}`
       );
 
       if (!response.ok) {

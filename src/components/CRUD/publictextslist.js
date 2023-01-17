@@ -22,7 +22,7 @@ function PublicTextsList() {
   useEffect(() => {
     async function getTexts() {
       const response = await fetch(
-        `https://sanskrit-cms-backend.herokuapp.com/public`
+        `https://sanskrit-cms-backend.onrender.com/public`
       );
 
       if (!response.ok) {

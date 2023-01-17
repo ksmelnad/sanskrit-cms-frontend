@@ -19,7 +19,7 @@ const Edit = () => {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://sanskrit-cms-backend.herokuapp.com/text/${params.id.toString()}`
+        `https://sanskrit-cms-backend.onrender.com/text/${params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -62,7 +62,7 @@ const Edit = () => {
       .save()
       .then(async (content) => {
         await fetch(
-          `https://sanskrit-cms-backend.herokuapp.com/update/${params.id}`,
+          `https://sanskrit-cms-backend.onrender.com/update/${params.id}`,
           {
             method: "PATCH",
             body: JSON.stringify({ googleId, title, status, content }),

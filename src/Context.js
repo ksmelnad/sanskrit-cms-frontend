@@ -8,7 +8,7 @@ function Context(props) {
 
   useEffect(() => {
     axios
-      .get("https://sanskrit-cms-backend.herokuapp.com/getuser", {
+      .get("https://sanskrit-cms-backend.onrender.com/getuser", {
         withCredentials: true,
       })
       .then((res) => {

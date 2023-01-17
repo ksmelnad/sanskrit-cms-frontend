@@ -47,7 +47,7 @@ function TextList() {
   useEffect(() => {
     async function getTexts() {
       const response = await fetch(
-        `https://sanskrit-cms-backend.herokuapp.com/text`,
+        `https://sanskrit-cms-backend.onrender.com/text`,
         {
           method: "POST",
           headers: {
@@ -70,7 +70,7 @@ function TextList() {
 
   // This method will delete a record
   async function deleteText(id) {
-    await fetch(`https://sanskrit-cms-backend.herokuapp.com/${id}`, {
+    await fetch(`https://sanskrit-cms-backend.onrender.com/${id}`, {
       method: "DELETE",
     });
 

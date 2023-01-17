@@ -36,7 +36,7 @@ const Create = () => {
   async function onSubmit(e) {
     e.preventDefault();
     editor.save().then(async (content) => {
-      await fetch("https://sanskrit-cms-backend.herokuapp.com/text/add", {
+      await fetch("https://sanskrit-cms-backend.onrender.com/text/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
